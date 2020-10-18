@@ -33,9 +33,8 @@ namespace ClassAndObjectFollowAlong //using the same name space with program.cs
              *******************/
 
 
-            
-            int timeShuffle = 0;
-            deck = Shuffle(deck, out timeShuffle, 3);
+
+            deck.Shuffle(3);
 
 
 
@@ -61,37 +60,13 @@ namespace ClassAndObjectFollowAlong //using the same name space with program.cs
             }
             Console.WriteLine(deck.Cards.Count);
             //Easy way to format string: can add {1} after {0} and add another variable need to be formatted after timeshuffled
-            Console.WriteLine("Time shuffled {0} ", timeShuffle);
+            
             
            //Console.WriteLine(deck.Cards[0].Face + " of " + deck.Cards[0].Suits);
             Console.ReadLine();
         }
 
-        //Added method
-        //Modify this shuffle method to use optional parameter instead of overload method
-        //Modify this shuffle method to use optional parameter, OUT PARAMETER instead of overload method
-        public static Deck Shuffle(Deck deck, out int timesShuffled, int times = 1)
-            //demonstrate for OUT PARAMETER added out int timeShuffled
-                //Assigned times = 1 means assign the default value 
-                //--> that is how to create an optional parameter by assign a default value 1 to time (time = 1 )                              
-        {
-            timesShuffled = 0;
-            for (int i = 0; i < times; i++)
-            {
-                timesShuffled++;
-                List<Card> TempList = new List<Card>();
-                Random random = new Random();
-                while (deck.Cards.Count > 0)
-                {
-                    int randomIndex = random.Next(0, deck.Cards.Count);
-                    TempList.Add(deck.Cards[randomIndex]);
-                    deck.Cards.RemoveAt(randomIndex);
-
-                }
-                deck.Cards = TempList;
-            }
-            return deck;
-        }
+        
         //Overload method: when function is similar. shuffle multiple times similar to shuffle
         //public static Deck Shuffle(Deck deck, int times)
         //{

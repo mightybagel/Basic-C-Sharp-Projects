@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassAndObjectFollowAlong
 {
-    public class Deck //Deck is a collection of card
+    public class Deck //Deck is a collection of card 
     {
         /*
         public Deck()
@@ -44,6 +44,39 @@ namespace ClassAndObjectFollowAlong
         
 
         public List<Card> Cards { get; set; }
+
+
+        //Added method
+        //Modify this shuffle method to use optional parameter instead of overload method
+        //Modify this shuffle method to use optional parameter, OUT PARAMETER instead of overload method
+        //Moved the shuffle method to deck.cs because this is behavior of deck
+        public void  Shuffle(int times = 1)
+        //demonstrate for OUT PARAMETER added out int timeShuffled
+        //Assigned times = 1 means assign the default value 
+        //--> that is how to create an optional parameter by assign a default value 1 to time (time = 1 )                              
+        {
+
+            for (int i = 0; i < times; i++)
+            {
+
+                List<Card> TempList = new List<Card>();
+                Random random = new Random();
+                while (Cards.Count > 0)
+                {
+                    int randomIndex = random.Next(0, Cards.Count);
+                    TempList.Add(Cards[randomIndex]);
+                    Cards.RemoveAt(randomIndex);
+
+                }
+                this.Cards = TempList;
+            }
             
+            //Since this is a method of deck, do not need static
+            //Removed deck because it operates in the deck.cs
+            //Removed out parameter timeshuffled
+            //Replace with this b/c it refers to itself
+            //Removed return because it is internal no need return anything
+        } 
+
     }
 }
