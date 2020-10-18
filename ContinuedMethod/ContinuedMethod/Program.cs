@@ -8,7 +8,7 @@ namespace ContinuedMethod
 {
     class Program
     {
-
+        //This demonstrates name parameter
         public static void Main(string[] args)
         {
             Calculations num = new Calculations();
