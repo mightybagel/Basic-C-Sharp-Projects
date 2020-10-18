@@ -26,9 +26,19 @@ namespace ClassAndObjectFollowAlong //using the same name space with program.cs
 
             //This shows inheritance from Game class
             //TweentyOneGame game = new TweentyOneGame();
-            Game game = new Game();
+
+
+
+            //Game game = new Game();
+            //Game game = new TweentyOneGame();//Polymorphism: use when has many type of game
+
+
+
+            TweentyOneGame game = new TweentyOneGame();
             game.Players = new List<string>() { "Jesse", "Bill", "Joe" };
             game.ListPlayers();
+            
+
             //game.Play();
             Console.ReadLine();
 
@@ -60,15 +70,15 @@ namespace ClassAndObjectFollowAlong //using the same name space with program.cs
 
             //Console.WriteLine(cardOne.Face + " of" + cardOne.Suits);
             //foreach (Card card in deck.Cards)
-            //{
-            //    Console.WriteLine(card.Face + " of " + card.Suits);
+           //{
+             //   Console.WriteLine(card.Face + " of " + card.Suits);
             //}
             //Console.WriteLine(deck.Cards.Count);
             //Easy way to format string: can add {1} after {0} and add another variable need to be formatted after timeshuffled
             
             
            //Console.WriteLine(deck.Cards[0].Face + " of " + deck.Cards[0].Suits);
-            Console.ReadLine();
+            //Console.ReadLine();
         }
 
         
