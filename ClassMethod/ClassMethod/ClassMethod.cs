@@ -27,5 +27,6 @@ namespace ClassMethodAssignment
             long quotient = num / 2;
             Console.WriteLine("The quotient of " + num + " and 2 = " + quotient);
         }
+
     }
 }

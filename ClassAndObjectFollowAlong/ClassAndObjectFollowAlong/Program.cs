@@ -9,6 +9,8 @@ namespace ClassAndObjectFollowAlong //using the same name space with program.cs
 {
     class Program
     {
+        //Inheritance is one of the 4 pillars of oop
+        //best coding practice of inheritance is the acronym DRY: Don't Repeat Yourself
         static void Main(string[] args)
         {
             /********************
@@ -20,7 +22,17 @@ namespace ClassAndObjectFollowAlong //using the same name space with program.cs
 
              ******************/
 
-            Deck deck = new Deck();
+            //Card card = new Card() { Face = "King", Suits = "Spades" };//different way to initialize instance of class card
+
+            //This shows inheritance from Game class
+            //TweentyOneGame game = new TweentyOneGame();
+            Game game = new Game();
+            game.Players = new List<string>() { "Jesse", "Bill", "Joe" };
+            game.ListPlayers();
+            //game.Play();
+            Console.ReadLine();
+
+            //Deck deck = new Deck();
             //deck = Shuffle(deck);//comment this to get the ordered deck
 
 
@@ -32,16 +44,9 @@ namespace ClassAndObjectFollowAlong //using the same name space with program.cs
             //deck = Shuffle(deck:deck, times: 3); 
              *******************/
 
-
-
-            deck.Shuffle(3);
-
-
+            //deck.Shuffle(3);
 
             //deck = Shuffle(deck:deck, times: 3); 
-
-
-
 
             /**********************************
             //Can replace the block of following codes by create a constructor in deck class to initialize a deck object
@@ -54,11 +59,11 @@ namespace ClassAndObjectFollowAlong //using the same name space with program.cs
             **********************************/
 
             //Console.WriteLine(cardOne.Face + " of" + cardOne.Suits);
-            foreach (Card card in deck.Cards)
-            {
-                Console.WriteLine(card.Face + " of " + card.Suits);
-            }
-            Console.WriteLine(deck.Cards.Count);
+            //foreach (Card card in deck.Cards)
+            //{
+            //    Console.WriteLine(card.Face + " of " + card.Suits);
+            //}
+            //Console.WriteLine(deck.Cards.Count);
             //Easy way to format string: can add {1} after {0} and add another variable need to be formatted after timeshuffled
             
             

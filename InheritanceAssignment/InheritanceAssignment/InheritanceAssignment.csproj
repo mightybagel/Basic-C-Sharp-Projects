@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A6469173-7C06-41D9-A494-EDED464E3652}</ProjectGuid>
+    <ProjectGuid>{DCBC4BDA-392C-4CFF-9BE4-CFAB869F63CD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ClassAndObjectFollowAlong</RootNamespace>
-    <AssemblyName>ClassAndObjectFollowAlong</AssemblyName>
+    <RootNamespace>InheritanceAssignment</RootNamespace>
+    <AssemblyName>InheritanceAssignment</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Card.cs" />
-    <Compile Include="Deck.cs" />
-    <Compile Include="Game.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TweentyOneGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
