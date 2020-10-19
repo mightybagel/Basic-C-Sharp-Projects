@@ -1,11 +1,10 @@
-﻿using InterfaceAssignment_P240;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AbstractAssignment_P237
+namespace InterfaceAssignment_P240
 {
     class Program
     {
