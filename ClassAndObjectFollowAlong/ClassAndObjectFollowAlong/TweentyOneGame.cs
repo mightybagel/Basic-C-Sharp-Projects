@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassAndObjectFollowAlong
 {
-    public class TweentyOneGame : Game
+    public class TweentyOneGame : Game, IWalkAway
     { 
         public override void Play()
         {
@@ -17,6 +17,10 @@ namespace ClassAndObjectFollowAlong
         {
             Console.WriteLine("21 Players: ");
             base.ListPlayers();
+        }
+        public void WalkAway(Player player)
+        {
+            throw new NotFiniteNumberException();
         }
         
     }
