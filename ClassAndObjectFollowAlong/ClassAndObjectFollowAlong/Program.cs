@@ -34,12 +34,19 @@ namespace ClassAndObjectFollowAlong //using the same name space with program.cs
 
 
 
-            TweentyOneGame game = new TweentyOneGame();
+            Game game = new TweentyOneGame();
+            game.Players = new List<Player>();
+            Player player = new Player();
+            player.Name = "Jessie";
+            game = game + player;
+            Deck deck = new Deck();
+            //deck = Shuffle(3);
             game.Players = new List<string>() { "Jesse", "Bill", "Joe" };
             game.ListPlayers();
             
 
             //game.Play();
+            
             Console.ReadLine();
 
             //Deck deck = new Deck();
@@ -69,11 +76,11 @@ namespace ClassAndObjectFollowAlong //using the same name space with program.cs
             **********************************/
 
             //Console.WriteLine(cardOne.Face + " of" + cardOne.Suits);
-            //foreach (Card card in deck.Cards)
-           //{
-             //   Console.WriteLine(card.Face + " of " + card.Suits);
-            //}
-            //Console.WriteLine(deck.Cards.Count);
+            foreach (Card card in deck.Cards)
+           {
+               Console.WriteLine(card.Face + " of " + card.Suits);
+            }
+            Console.WriteLine(deck.Cards.Count);
             //Easy way to format string: can add {1} after {0} and add another variable need to be formatted after timeshuffled
             
             
