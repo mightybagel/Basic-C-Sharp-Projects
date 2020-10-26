@@ -13,9 +13,14 @@ namespace InterfaceAssignment_P240
         {
             Console.WriteLine("Name: " + FirstName + " " + LastName);
         }
-        public void Quit()
+        //void IQuittable.Quit()//explicit interface implementation
+        //{
+        //    Console.WriteLine("I quit");
+        //}
+
+        public void Quit()//implicit interface
         {
-            Console.WriteLine("I quit");
+            Console.WriteLine("I pretend to quit");
         }
     }
 }

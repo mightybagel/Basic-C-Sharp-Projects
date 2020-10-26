@@ -18,6 +18,7 @@ namespace InterfaceAssignment_P240
             IQuittable man = new Employee();
             man.Quit();
 
+            e.Quit(); //Cant call using Employee type because the interface was implemented explicitly: void IQuittable.Quit()
 
             Console.ReadLine();
         }
