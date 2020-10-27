@@ -1,0 +1,32 @@
+﻿@using CarInsurance.Views.ViewModel
+@model List<AdminInsureeVm>
+
+<div class="container">
+  <div class="card-body row">
+    <div>
+      <h5 class="text-center">Quotes</h5>
+    </div>
+    <div class="card-body">
+      @foreach (AdminInsureeVm entry in Model)
+      {
+        <div class="row ">
+          <div class="col-md-2">
+            @entry.Id
+          </div>
+          <div class="col-md-2">
+            @entry.FirstName
+          </div>
+          <div class="col-md-2">
+            @entry.LastName
+          </div>
+          <div class="col-md-2">
+            @entry.EmailAddress
+          </div>
+          <div class="col-md-2">
+            @entry.Quote
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>
