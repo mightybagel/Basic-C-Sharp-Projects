@@ -4,9 +4,26 @@
 <div class="container">
   <div class="card-body row">
     <div>
-      <h5 class="text-center">Quotes</h5>
+      <h5 class="text-center">Administrator View - Quotes</h5>
     </div>
     <div class="card-body">
+      <div class="row ">
+        <div class="text-white bg-dark col-md-2">
+          Id
+        </div>
+        <div class="text-white bg-dark col-md-2">
+          First Name
+        </div>
+        <div class="text-white bg-dark col-md-2">
+          Last Name
+        </div>
+        <div class="text-white bg-dark col-md-2">
+          Email Address
+        </div>
+        <div class="text-white bg-dark col-md-2">
+          Quote
+        </div>
+      </div>
       @foreach (AdminInsureeVm entry in Model)
       {
         <div class="row ">
@@ -23,7 +40,7 @@
             @entry.EmailAddress
           </div>
           <div class="col-md-2">
-            @entry.Quote
+            @entry.Quote.ToString("c")
           </div>
         </div>
       }
